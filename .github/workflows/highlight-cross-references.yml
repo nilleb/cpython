@@ -33,7 +33,7 @@ jobs:
               const [o,r,num] = ref.replace('#','/').split('/');
               await github.rest.issues.addLabels({
                 owner: o, repo: r, issue_number: Number(num),
-                labels: ['pr-crossref']
+                labels: ['has-pr']
               });
             }
   label-from-pr-comment:
@@ -58,6 +58,6 @@ jobs:
               const [o,r,num] = ref.replace('#','/').split('/');
               await github.rest.issues.addLabels({
                 owner: o, repo: r, issue_number: Number(num),
-                labels: ['pr-crossref']
+                labels: ['has-pr']
               });
             }
